@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500;600&display=swap');
+
+:root {
+  --navy: #02081c;
+  --blue: #1a3a6b;
+  --accent: #e8a020;
+  --light: #f4f7ff;
+  --white: #fff;
+  --border: #c5d0e8;
+  --muted: #5a6a8a;
+  --text: #1a2340;
+  --row-alt: #eef2fb;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'DM Sans', sans-serif; background: var(--light); min-height: 100vh; display: flex; flex-direction: column; }
+
+header { background: var(--navy); padding: 18px 30px; display: flex; align-items: center; justify-content: space-between; position: relative; }
+header::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--accent), #f7c96e, var(--accent)); }
+header h1 { font-family: 'Playfair Display', serif; color: var(--white); font-size: 1.4rem; }
+header nav a { color: #8fa8d8; text-decoration: none; margin-left: 20px; font-size: 0.9rem; font-weight: 500; transition: color 0.2s; }
+header nav a:hover { color: var(--accent); }
+
+.layout { display: flex; flex: 1; }
+
+aside { width: 200px; min-width: 200px; background: var(--navy); padding: 30px 0; }
+aside h3 { color: var(--accent); font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; padding: 0 20px 16px; border-bottom: 1px solid #1e2d4a; margin-bottom: 10px; }
+aside a { display: block; color: #8fa8d8; text-decoration: none; padding: 11px 20px; font-size: 0.9rem; transition: all 0.2s; border-left: 3px solid transparent; }
+aside a:hover, aside a.active { color: var(--white); background: #1a3a6b33; border-left-color: var(--accent); }
+
+.content-area { flex: 1; padding: 30px; overflow-y: auto; }
+
+.card { background: var(--white); border-radius: 14px; box-shadow: 0 4px 30px rgba(13,27,62,0.10); overflow: hidden; border: 1px solid var(--border); margin-bottom: 24px; }
+.card-header { background: var(--blue); color: var(--white); padding: 18px 24px; font-family: 'Playfair Display', serif; font-size: 1.3rem; }
+.card-body { padding: 24px; }
+
+table { width: 100%; border-collapse: collapse; }
+thead tr { background: var(--blue); }
+thead th { color: var(--white); font-size: 0.78rem; letter-spacing: 1px; text-transform: uppercase; padding: 14px 16px; text-align: left; }
+tbody tr { border-bottom: 1px solid var(--border); transition: background 0.2s; }
+tbody tr:nth-child(even) { background: var(--row-alt); }
+tbody tr:last-child { border-bottom: none; }
+tbody tr:hover { background: #dce6ff; }
+tbody td { padding: 13px 16px; font-size: 0.92rem; }
+
+.badge { display: inline-block; background: var(--accent); color: var(--navy); font-weight: 700; font-size: 0.78rem; padding: 3px 12px; border-radius: 20px; }
+.btn-book { background: var(--accent); color: var(--navy); border: none; padding: 6px 16px; border-radius: 20px; font-weight: 700; font-size: 0.8rem; cursor: pointer; transition: opacity 0.2s; }
+.btn-book:hover { opacity: 0.85; }
+.btn-primary { background: var(--blue); color: var(--white); border: none; padding: 11px 32px; border-radius: 8px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: background 0.2s; margin: 0 6px; }
+.btn-primary:hover { background: #0d2350; }
+.btn-secondary { background: var(--border); color: var(--navy); border: none; padding: 11px 24px; border-radius: 8px; font-size: 0.95rem; cursor: pointer; margin: 0 6px; }
+
+.form-grid { display: grid; grid-template-columns: 160px 1fr; gap: 14px; align-items: center; max-width: 480px; margin: 0 auto; }
+.form-grid label { font-weight: 500; color: var(--muted); font-size: 0.9rem; }
+.form-grid input, .form-grid select { padding: 10px 14px; border: 1px solid var(--border); border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; transition: border 0.2s; width: 100%; }
+.form-grid input:focus, .form-grid select:focus { outline: none; border-color: var(--blue); }
+.form-actions { text-align: center; margin-top: 20px; }
+.form-link { text-align: center; margin-top: 16px; color: var(--muted); font-size: 0.88rem; }
+.form-link a { color: var(--blue); font-weight: 600; text-decoration: none; }
+
+.success-box { background: #e8f5e9; border: 1px solid #a5d6a7; border-radius: 10px; padding: 20px; text-align: center; color: #2e7d32; display: none; margin-top: 16px; }
+
+.hero { background: linear-gradient(135deg, var(--navy) 60%, #1a3a6b); color: var(--white); border-radius: 14px; padding: 50px 40px; margin-bottom: 24px; position: relative; overflow: hidden; }
+.hero::before { content: '🎟️'; font-size: 8rem; position: absolute; right: 40px; top: 20px; opacity: 0.15; }
+.hero h2 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 10px; }
+.hero p { color: #8fa8d8; margin-bottom: 24px; }
+.hero-btn { background: var(--accent); color: var(--navy); border: none; padding: 12px 30px; border-radius: 8px; font-weight: 700; font-size: 1rem; cursor: pointer; }
+
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 24px; }
+.stat-card { background: var(--white); border-radius: 12px; padding: 20px; text-align: center; border: 1px solid var(--border); box-shadow: 0 2px 10px rgba(13,27,62,0.07); }
+.stat-card .num { font-size: 2rem; font-weight: 700; color: var(--blue); font-family: 'Playfair Display', serif; }
+.stat-card .lbl { color: var(--muted); font-size: 0.85rem; margin-top: 4px; }
+
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.gallery-item { border-radius: 10px; overflow: hidden; background: var(--white); border: 1px solid var(--border); box-shadow: 0 2px 10px rgba(13,27,62,0.07); }
+.gallery-item img { width: 100%; height: 160px; object-fit: cover; }
+.gallery-label { padding: 10px 14px; font-size: 0.88rem; font-weight: 500; }
+
+.map-container { border-radius: 12px; overflow: hidden; border: 1px solid var(--border); }
+.map-list { margin-top: 20px; }
+.map-item { display: flex; align-items: center; gap: 14px; padding: 14px; border-bottom: 1px solid var(--border); font-size: 0.9rem; }
+.map-item:last-child { border-bottom: none; }
+.map-icon { font-size: 1.5rem; }
+
+.footer-note { text-align: center; margin-top: 20px; color: var(--muted); font-size: 0.8rem; }

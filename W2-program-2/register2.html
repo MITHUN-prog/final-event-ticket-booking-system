@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register</title>
+<link rel="stylesheet" href="style.css">
+<style>body { display: flex; flex-direction: column; min-height: 100vh; }</style>
+</head>
+<body>
+<header>
+  <h1>🎟 Online Event Ticket Booking</h1>
+  <nav>
+    <a href="index2.html">Home</a>
+    <a href="catelogue2.html">Events</a>
+    <a href="login2.html">Login</a>
+    <a href="register2.html">Register</a>
+  </nav>
+</header>
+<div class="layout">
+  <aside>
+    <h3>Menu</h3>
+    <a href="../W5-program-5/content2.html">🏠 Home</a>
+    <a href="catelogue2.html">📋 Event Catalogue</a>
+    <a href="login2.html">🔐 Login</a>
+    <a href="register2.html" class="active">📝 Register</a>
+    <a href="../W2-program-3/imagepage2.html">🖼 Event Gallery</a>
+    <a href="../W4-program-4/studentform2.html">🎫 Book Ticket</a>
+    <a href="../W5-program-5/map2.html">📍 Event Location</a>
+    <a href="../W1-program-1/program1.html">📊 Student Records</a>
+    <a href="lms.html">🎓 LMS Portal</a>
+  </aside>
+  <main class="content-area">
+    <div class="card" style="max-width:560px; margin:0 auto;">
+      <div class="card-header">📝 User Registration</div>
+      <div class="card-body">
+        <div class="form-grid">
+          <label>Full Name:</label><input type="text" placeholder="Enter your name">
+          <label>Email:</label><input type="email" placeholder="Enter your email">
+          <label>Username:</label><input type="text" placeholder="Choose a username">
+          <label>Password:</label><input type="password" placeholder="Enter password">
+          <label>Confirm Password:</label><input type="password" placeholder="Confirm password">
+          <label>Phone Number:</label><input type="tel" placeholder="Enter phone number">
+          <label>City:</label>
+          <select>
+            <option>Chennai</option>
+            <option>Bangalore</option>
+            <option>Hyderabad</option>
+            <option>Mumbai</option>
+            <option>Delhi</option>
+          </select>
+        </div>
+        <div class="form-actions">
+          <button class="btn-primary" onclick="doRegister()">Register</button>
+          <button class="btn-secondary" onclick="clearForm()">Clear</button>
+        </div>
+        <div class="form-link">Already have an account? <a href="login2.html">Login here</a></div>
+        <div class="success-box" id="register-success">✅ Registration Successful! You can now login.</div>
+      </div>
+    </div>
+  </main>
+</div>
+<script>
+  function doRegister() {
+    document.getElementById('register-success').style.display = 'block';
+    setTimeout(() => { window.location.href = 'login2.html'; }, 2000);
+  }
+  function clearForm() {
+    document.querySelectorAll('input').forEach(i => i.value = '');
+  }
+</script>
+</body>
+</html>

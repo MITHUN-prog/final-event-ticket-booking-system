@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Location Map</title>
+<link rel="stylesheet" href="../W2-program-2/style.css">
+<style>body { display: flex; flex-direction: column; min-height: 100vh; }</style>
+</head>
+<body>
+<header>
+  <h1>🎟 Online Event Ticket Booking</h1>
+  <nav>
+    <a href="content2.html">Home</a>
+    <a href="../W2-program-2/catelogue2.html">Events</a>
+    <a href="../W2-program-2/login2.html">Login</a>
+    <a href="../W2-program-2/register2.html">Register</a>
+  </nav>
+</header>
+<div class="layout">
+  <aside>
+    <h3>Menu</h3>
+    <a href="content2.html">🏠 Home</a>
+    <a href="../W2-program-2/catelogue2.html">📋 Event Catalogue</a>
+    <a href="../W2-program-2/login2.html">🔐 Login</a>
+    <a href="../W2-program-2/register2.html">📝 Register</a>
+    <a href="../W2-program-3/imagepage2.html">🖼 Event Gallery</a>
+    <a href="../W4-program-4/studentform2.html">🎫 Book Ticket</a>
+    <a href="map2.html" class="active">📍 Event Location</a>
+    <a href="../W1-program-1/program1.html">📊 Student Records</a>
+    <a href="../W2-program-2/lms.html">🎓 LMS Portal</a>
+  </aside>
+  <main class="content-area">
+    <div class="card">
+      <div class="card-header">📍 Event Location Map</div>
+      <div class="card-body">
+        <p style="color:var(--muted); margin-bottom:16px; text-align:center;">Find the event location on the map below.</p>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d31097.69312696201!2d80.20315052735594!3d13.022190383505647!3m2!1i1024!2i768!4f13.1!2m1!1symca%20nandanam%20ground!5e0!3m2!1sen!2sin!4v1773304156675!5m2!1sen!2sin"
+            width="100%" height="400"
+            style="border:0; display:block;"
+            allowfullscreen loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <div class="map-list">
+          <div class="map-item"><span class="map-icon">🎵</span><div><strong>Music Concert</strong> — Chennai, Tamil Nadu · 10 Aug 2026</div></div>
+          <div class="map-item"><span class="map-icon">💃</span><div><strong>Dance Festival</strong> — Bangalore, Karnataka · 15 Sep 2026</div></div>
+          <div class="map-item"><span class="map-icon">🎤</span><div><strong>Stand-up Comedy</strong> — Hyderabad, Telangana · 5 Oct 2026</div></div>
+          <div class="map-item"><span class="map-icon">🍽️</span><div><strong>Food Festival</strong> — Mumbai, Maharashtra · 20 Nov 2026</div></div>
+          <div class="map-item"><span class="map-icon">💻</span><div><strong>Tech Conference</strong> — Delhi, NCR · 12 Dec 2026</div></div>
+        </div>
+        <div style="text-align:center; margin-top:24px;">
+          <a href="content2.html"><button class="btn-primary">🏠 Back to Home</button></a>
+        </div>
+        <p style="text-align:center; color:var(--muted); font-size:0.75rem; margin-top:20px;">© 2026 Online Event Ticket Booking System</p>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>

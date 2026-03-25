@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking Confirmation</title>
+<link rel="stylesheet" href="../W2-program-2/style.css">
+<style>body { display: flex; flex-direction: column; min-height: 100vh; }</style>
+</head>
+<body>
+<header>
+  <h1>🎟 Online Event Ticket Booking</h1>
+  <nav>
+    <a href="../W2-program-2/index2.html">Home</a>
+    <a href="../W2-program-2/catelogue2.html">Events</a>
+    <a href="../W2-program-2/login2.html">Login</a>
+    <a href="../W2-program-2/register2.html">Register</a>
+  </nav>
+</header>
+<div class="layout">
+  <aside>
+    <h3>Menu</h3>
+    <a href="../W5-program-5/content2.html">🏠 Home</a>
+    <a href="../W2-program-2/catelogue2.html">📋 Event Catalogue</a>
+    <a href="../W2-program-2/login2.html">🔐 Login</a>
+    <a href="../W2-program-2/register2.html">📝 Register</a>
+    <a href="../W2-program-3/imagepage2.html">🖼 Event Gallery</a>
+    <a href="studentform2.html">🎫 Book Ticket</a>
+    <a href="../W5-program-5/map2.html">📍 Event Location</a>
+    <a href="../W1-program-1/program1.html">📊 Student Records</a>
+    <a href="../W2-program-2/lms.html">🎓 LMS Portal</a>
+  </aside>
+  <main class="content-area">
+    <div class="card" style="max-width:540px; margin:0 auto; text-align:center;">
+      <div class="card-header">✅ Booking Confirmation</div>
+      <div class="card-body">
+        <div style="font-size:4rem; margin:20px 0;">🎟️</div>
+        <h3 style="color:var(--blue); font-family:'Playfair Display',serif; margin-bottom:12px;">Booking Submitted Successfully!</h3>
+        <p style="color:var(--muted); margin-bottom:8px;">Your ticket booking has been successfully submitted.</p>
+        <p style="color:var(--muted); margin-bottom:24px;">Thank you for booking with us!</p>
+        <div id="confirm-details" style="background:#eef2fb; border-radius:10px; padding:16px; margin-bottom:24px; text-align:left; font-size:0.9rem; line-height:2;"></div>
+        <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+          <a href="../W2-program-2/index2.html"><button class="btn-primary">🏠 Back to Home</button></a>
+          <a href="../W2-program-2/catelogue2.html"><button class="btn-secondary">📋 View More Events</button></a>
+        </div>
+        <p style="margin-top:24px; color:var(--muted); font-size:0.78rem;">© 2026 Online Event Ticket Booking System</p>
+      </div>
+    </div>
+  </main>
+</div>
+<script>
+  const data = sessionStorage.getItem('booking');
+  if (data) {
+    const b = JSON.parse(data);
+    document.getElementById('confirm-details').innerHTML =
+      '<b>Name:</b> '        + b.name    + '<br>' +
+      '<b>Register No:</b> ' + b.regno   + '<br>' +
+      '<b>Email:</b> '       + b.email   + '<br>' +
+      '<b>Phone:</b> '       + b.phone   + '<br>' +
+      '<b>Gender:</b> '      + b.gender  + '<br>' +
+      '<b>Event:</b> '       + b.event   + '<br>' +
+      '<b>Tickets:</b> '     + b.tickets + '<br>' +
+      '<b>Date:</b> '        + (b.date || 'Not selected');
+  }
+</script>
+</body>
+</html>
